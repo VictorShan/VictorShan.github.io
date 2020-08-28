@@ -20,9 +20,9 @@ export default function ProjectCard({project}: propsType) {
         <div className={styles.iconImg}>
           <img src={iconImg}/>
         </div>
-        <h3>{projName}</h3>
+        <h3 className={styles.title}>{projName}</h3>
       </div>
-      <p>{projDesc}</p>
+      <p className={styles.desc}>{projDesc}</p>
     </article>
   )
 }
