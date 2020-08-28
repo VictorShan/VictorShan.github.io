@@ -1,7 +1,6 @@
-import { Icon, InlineIcon } from '@iconify/react'
+import { InlineIcon } from '@iconify/react'
 import githubIcon from '@iconify/icons-logos/github-icon'
 import globe2Icon from '@iconify/icons-bi/globe2'
-import Link from 'next/link'
 import styles from './ProjectLinks.module.sass'
 
 type links = {
