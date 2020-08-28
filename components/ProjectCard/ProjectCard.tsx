@@ -1,4 +1,5 @@
 import styles from './ProjectCard.module.sass'
+import ProjectLinks from './ProjectLinks';
 
 type projectType = {
   projImg: string,
@@ -23,6 +24,7 @@ export default function ProjectCard({project}: propsType) {
         <h3 className={styles.title}>{projName}</h3>
       </div>
       <p className={styles.desc}>{projDesc}</p>
+      <ProjectLinks links={{ github: github, website: website }} />
     </article>
   )
 }

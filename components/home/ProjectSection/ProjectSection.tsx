@@ -26,19 +26,23 @@ const projects: project[] = [
     projImg: "https://images.pexels.com/photos/3573555/pexels-photo-3573555.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
     iconImg: "https://image.flaticon.com/icons/png/512/136/136968.png",
     projName: "Hypnosis",
-    projDesc: "Hypnotizes the user to empty their bank accounts to my bank account."
+    projDesc: "Hypnotizes the user to empty their bank accounts to my bank account.",
+    github: "asdf",
+    website: "website"
   },
   {
     projImg: "https://images.pexels.com/photos/3573555/pexels-photo-3573555.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
     iconImg: "https://image.flaticon.com/icons/png/512/136/136968.png",
     projName: "Hypnosis 2",
-    projDesc: "Hypnotizes the user to empty their bank accounts to my bank account."
+    projDesc: "Hypnotizes the user to empty their bank accounts to my bank account.",
+    github: "asdf"
   },
   {
     projImg: "https://images.pexels.com/photos/3573555/pexels-photo-3573555.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
     iconImg: "https://image.flaticon.com/icons/png/512/136/136968.png",
     projName: "Hypnosis 3",
-    projDesc: "Hypnotizes the user to empty their bank accounts to my bank account."
+    projDesc: "Hypnotizes the user to empty their bank accounts to my bank account.",
+    website: "website"
   },
   {
     projImg: "https://images.pexels.com/photos/3573555/pexels-photo-3573555.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
