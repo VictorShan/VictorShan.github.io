@@ -16,8 +16,8 @@ export default function ProjectCard({project}: propsType) {
   const { projImg, iconImg, projName, projDesc, github, website } = project;
   return (
     <article className={styles.projCard}>
-      <img src={projImg} className={styles.projImg}/>
-      {iconImg ? <img src={iconImg} className={styles.iconImg}/> : null}
+      <img src={projImg} className={styles.projImg} alt={`${projName} screenshot`}/>
+      {iconImg ? <img src={iconImg} className={styles.iconImg} alt={`${projName} Icon`}/> : null}
       <div className={styles.iconTitle}>
         
         <h4 className={styles.title}>{projName}</h4>
