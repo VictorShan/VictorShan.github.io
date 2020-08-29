@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import ProjectSection from '../components/home/ProjectSection/ProjectSection'
+import Introduction from '../components/home/Introduction/Introduction'
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main>
-        <h1>Welcome to my Website!</h1>
+        <Introduction />
         <ProjectSection />
       </main>
     </div>
