@@ -3,7 +3,7 @@ import ProjectLinks from './ProjectLinks';
 
 type projectType = {
   projImg: string,
-  iconImg: string,
+  iconImg?: string,
   projName: string,
   projDesc: string,
   github?: string,
@@ -17,11 +17,10 @@ export default function ProjectCard({project}: propsType) {
   return (
     <article className={styles.projCard}>
       <img src={projImg} className={styles.projImg}/>
+      {iconImg ? <img src={iconImg} className={styles.iconImg}/> : null}
       <div className={styles.iconTitle}>
-        <div className={styles.iconImg}>
-          <img src={iconImg}/>
-        </div>
-        <h3 className={styles.title}>{projName}</h3>
+        
+        <h4 className={styles.title}>{projName}</h4>
       </div>
       <p className={styles.desc}>{projDesc}</p>
       <footer className={styles.links}>

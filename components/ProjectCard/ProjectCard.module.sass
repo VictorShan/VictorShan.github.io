@@ -1,6 +1,8 @@
+$card-height: 400px
+$card-width: 300px
 .projCard
-  width: 300px
-  height: 350px
+  width: $card-width
+  height: $card-height
   background-color: white
   padding: 10px
   margin: 10px
@@ -13,26 +15,27 @@
   object-fit: cover
   height: 45%
   width: 100%
+  border: 1px solid black
+  margin-bottom: 10px
 
 .iconTitle
   display: flex
   flex-direction: row
 
 .iconImg
+  align-self: flex-start
   position: relative
   width: 30%
+  height: calc(#{$card-width} * .3)
   border-radius: 50%
   border: 2px solid black
-  margin-top: -15%
+  margin-top: -25%
   background-color: white
   z-index: 1
   text-align: center
   vertical-align: middle
-  margin-left: 10px
-  img
-    margin-top: 10%
-    width: 80%
-    object-fit: cover
+  margin-left: -5px
+  object-fit: cover
 
 .title
   flex-grow: 1
