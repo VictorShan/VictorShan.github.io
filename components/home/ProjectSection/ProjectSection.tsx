@@ -30,5 +30,11 @@ const projects: project[] = [
     projDesc: "Realtime, multiplayer tic tac toe. One user must be in incognito or private mode; or on a different browser or device",
     github: "https://github.com/VictorShan/tic-tac-toe",
     website: "https://tic-tac-toe-82af8.web.app/"
+  },
+  {
+    projImg: "/images/UWCampusMap.png",
+    projName: "UW Campus Map",
+    projDesc: "Map from one campus building to another using Dijkstra's algorithm. It uses a REST API to find the route.",
+    website: "https://uw-campus-map.herokuapp.com/"
   }
 ]
