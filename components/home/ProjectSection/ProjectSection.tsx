@@ -25,7 +25,6 @@ type project = {
 const projects: project[] = [
   {
     projImg: "/images/TicTacToeWinCentered.png",
-    //iconImg: "/images/TicTacToeEmpty.png",
     projName: "Tic Tac Toe",
     projDesc: "Realtime, multiplayer tic tac toe. One user must be in incognito or private mode; or on a different browser or device",
     github: "https://github.com/VictorShan/tic-tac-toe",
