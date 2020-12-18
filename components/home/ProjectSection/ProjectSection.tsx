@@ -24,6 +24,13 @@ type project = {
 
 const projects: project[] = [
   {
+    projImg: "/images/FightCovid19.png",
+    projName: "Data Visualization",
+    projDesc: "A data visualization project made using D3.js for UW CSE442. Please be patient, there's a lot of data to load.",
+    github: "https://github.com/cse442-20f/FP-Fight-Covid19/",
+    website: "https://cse442-20f.github.io/FP-Fight-Covid19/"
+  },
+  {
     projImg: "/images/TicTacToeNextJS.png",
     projName: "Tic Tac Toe - V2",
     projDesc: "A NextJS (React), realtime, multiplayer version of tic tac toe. One user must be in incognito or private mode; or on a different browser or device",
