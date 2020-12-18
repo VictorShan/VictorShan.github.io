@@ -16,8 +16,8 @@ export default function ProjectLinks({ links }: props) {
   const { github, website } = links
   return (
     <div className={styles.container}>
-      {github ? (<a href={github}><InlineIcon icon={githubIcon} /> GitHub</a>) : null}
-      {website ? (<a href={website}><InlineIcon icon={globe2Icon} /> Website</a>) : null}
+      {github ? (<a target={"_blank"} rel={"noopener noreferrer"} href={github}><InlineIcon icon={githubIcon} /> GitHub</a>) : null}
+      {website ? (<a target={"_blank"} rel={"noopener noreferrer"} href={website}><InlineIcon icon={globe2Icon} /> Website</a>) : null}
     </div>
   )
 }
