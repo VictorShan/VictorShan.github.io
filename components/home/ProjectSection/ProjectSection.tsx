@@ -34,14 +34,14 @@ const projects: project[] = [
     projImg: "/images/TicTacToeNextJS.png",
     projName: "Tic Tac Toe - V2",
     projDesc: "A NextJS (React), realtime, multiplayer version of tic tac toe. One user must be in incognito or private mode; or on a different browser or device",
-    github: "https://github.com/VictorShan/tic-tac-toe/tree/tic-tac-toe-nextjs",
+    github: "https://github.com/VictorShan/tic-tac-toe",
     website: "https://tic-tac-toe-nextjs.web.app/"
   },
   {
     projImg: "/images/TicTacToeWinCentered.png",
     projName: "Tic Tac Toe",
     projDesc: "Realtime, multiplayer tic tac toe. One user must be in incognito or private mode; or on a different browser or device",
-    github: "https://github.com/VictorShan/tic-tac-toe",
+    github: "https://github.com/VictorShan/tic-tac-toe/tree/master",
     website: "https://tic-tac-toe-82af8.web.app/"
   },
   {
