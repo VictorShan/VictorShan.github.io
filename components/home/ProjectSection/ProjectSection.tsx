@@ -38,6 +38,13 @@ const projects: project[] = [
     website: "https://tic-tac-toe-nextjs.web.app/"
   },
   {
+    projImg: "/images/shopifyFrontend.png",
+    projName: "Shopify Frontend Challenge",
+    projDesc: "The Shopify 2021 summer internship challenge. It gets data from OMDB database and the ability to nominate movies.",
+    github: "https://github.com/VictorShan/shopify2021-frontend",
+    website: "https://victorshan.github.io/shopify2021-frontend/"
+  },
+  {
     projImg: "/images/TicTacToeWinCentered.png",
     projName: "Tic Tac Toe",
     projDesc: "Realtime, multiplayer tic tac toe. One user must be in incognito or private mode; or on a different browser or device",
