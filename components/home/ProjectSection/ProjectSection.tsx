@@ -35,7 +35,7 @@ const projects: project[] = [
     projName: "Tic Tac Toe - V2",
     projDesc: "A NextJS (React), realtime, multiplayer version of tic tac toe. One user must be in incognito or private mode; or on a different browser or device",
     github: "https://github.com/VictorShan/tic-tac-toe",
-    website: "https://tic-tac-toe-nextjs.web.app/"
+    website: "https://tic-tac-toe.victorshan.vercel.app/"
   },
   {
     projImg: "/images/shopifyFrontend.png",
