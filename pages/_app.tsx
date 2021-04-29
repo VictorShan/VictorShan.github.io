@@ -1,6 +1,6 @@
-import '../styles/globals.css'
 import { AppPropsType } from 'next/dist/next-server/lib/utils'
-import Layout from '../components/Layout'
+import Layout from '../src/Layout'
+import '../styles/globals.scss'
 
 function MyApp({ Component, pageProps }: AppPropsType) {
   return (

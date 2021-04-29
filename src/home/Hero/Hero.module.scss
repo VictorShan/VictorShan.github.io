@@ -1,0 +1,37 @@
+.hero {
+  padding: max(10%, 10px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero div {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: max(10px, 5%);
+}
+
+.hero h1 {
+  width: 9ch;
+  margin: 0;
+  font-weight: bold;
+  font-size: 3.2rem;
+}
+
+.hero div img {
+  width: 100%;
+}
+
+@media screen and (max-width: 500px){
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero > div {
+    width: 100%;
+  }
+}
