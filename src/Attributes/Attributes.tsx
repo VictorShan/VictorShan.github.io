@@ -9,7 +9,7 @@ import { BsArrowClockwise } from '@react-icons/all-files/bs/BsArrowClockwise'
 export default function Attributes() {
     return (
         <section id={"about"} className={sectionStyles.section}>
-            <SectionHeader>About</SectionHeader>
+            <SectionHeader>What I Do</SectionHeader>
             <div className={styles.cards}>
                 <AttributeCard Icon={FaPencilRuler} title={"Design"} desc={designDesc}/>
                 <AttributeCard Icon={FaHammer} title={"Build"} desc={buildDesc}/>
