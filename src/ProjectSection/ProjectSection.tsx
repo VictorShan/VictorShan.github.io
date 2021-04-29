@@ -1,10 +1,12 @@
-import ProjectCard from "../../ProjectCard/ProjectCard"
+import ProjectCard from "../ProjectCard/ProjectCard"
 import styles from "./ProjectSection.module.sass"
+import sectionStyles from '../section.module.sass'
+import SectionHeading from '../SectionHeading/SectionHeading'
 
 export default function ProjectSection() {
   return (
-    <section id={"projects"} className={styles.projSection}>
-      <h2>Projects</h2>
+    <section id={"projects"} className={sectionStyles.section}>
+      <SectionHeading>Projects</SectionHeading>
       <div className={styles.projectContainer}>
         {projects.map(project => <ProjectCard key={project.projName} project={project} />)}
       </div>

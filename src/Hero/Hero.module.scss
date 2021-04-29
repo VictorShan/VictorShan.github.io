@@ -1,6 +1,6 @@
 .hero {
   padding: max(10%, 10px);
-
+  padding-top: calc(max(10%, 10px) - 75px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,6 +29,7 @@
 @media screen and (max-width: 500px){
   .hero {
     flex-direction: column;
+    padding-top: max(10%, 10px);
   }
 
   .hero > div {
