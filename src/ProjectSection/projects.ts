@@ -9,6 +9,13 @@ export type project = {
 
 const projects: project[] = [
   {
+    projImg: "/images/igemClub.png",
+    projName: "UW iGEM Club",
+    projDesc: "A member of the UW iGEM webdev team working on various parts from design and club requirements.",
+    website: "http://students.washington.edu/uwigem/#/",
+    github: "https://github.com/uwigem/uwigem2020-react"
+  },
+  {
     projImg: "/images/FightCovid19.png",
     projName: "Data Visualization",
     projDesc: "A data visualization project made using D3.js for UW CSE442. Please be patient, there's a lot of data to load.",

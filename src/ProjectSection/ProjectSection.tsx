@@ -9,7 +9,7 @@ export default function ProjectSection() {
     <section id={"projects"} className={sectionStyles.section}>
       <SectionHeading>Projects</SectionHeading>
       <div className={styles.projectTiles}>
-        {projects.map(project => <ProjectTile project={project} />)}
+        {projects.map(project => <ProjectTile project={project} key={project.projName}/>)}
       </div>
     </section>
   )

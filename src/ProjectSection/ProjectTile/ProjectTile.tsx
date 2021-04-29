@@ -13,18 +13,23 @@ export default function ProjectTile({ project, id }: props) {
   return (
     <Card
       className={styles.card}
-      key={id || project.projName}
       text={'dark'}
     >
       <Card.Img variant="top" src={project.projImg}/>
       <Card.Body className={styles.body}>
-        <Card.Title>{project.projName}</Card.Title>
+        <Card.Title className={styles.title}>{project.projName}</Card.Title>
         <Card.Text>{project.projDesc}</Card.Text>
         <div className={styles.buttonContainer}>
-          <Button variant="primary" disabled={!project.website}>
+          <Button
+            variant="primary"
+            onClick={() => window.open(project.website, "_blank", "noreferrer")}
+            disabled={!project.website}>
             <VscGlobe /> Website
           </Button>
-          <Button variant="outline-primary" disabled={!project.github}>
+          <Button
+            variant="outline-primary"
+            onClick={() => window.open(project.github, "_blank", "noreferrer")}
+            disabled={!project.github}>
             <FaGithub /> GitHub
           </Button>
         </div>
