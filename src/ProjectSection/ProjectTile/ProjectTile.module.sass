@@ -1,0 +1,20 @@
+.card
+  max-width: 500px
+  padding: clamp(10px, 5%, 30px)
+  border-color: black
+
+.body
+    display: flex
+    flex-flow: row wrap
+.buttonContainer
+  width: 100%
+  align-self: flex-end
+  display: flex
+  justify-content: flex-start
+  button:nth-child(1)
+    margin-right: 1rem
+
+@media screen and ( max-width: 500px )
+  .buttonContainer
+    justify-content: space-between
+    flex-direction: row
