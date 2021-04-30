@@ -11,7 +11,7 @@ const projects: project[] = [
   {
     projImg: "/images/igemClub.png",
     projName: "UW iGEM Club",
-    projDesc: "A member of the UW iGEM webdev team working on various parts from design and club requirements.",
+    projDesc: "Co-lead of the UW iGEM webdev team that both designs and builds the website.",
     website: "http://students.washington.edu/uwigem/#/",
     github: "https://github.com/uwigem/uwigem2020-react"
   },
@@ -25,7 +25,7 @@ const projects: project[] = [
   {
     projImg: "/images/TicTacToeNextJS.png",
     projName: "Tic Tac Toe - V2",
-    projDesc: "A NextJS (React), realtime, multiplayer version of tic tac toe. One user must be in incognito or private mode; or on a different browser or device",
+    projDesc: "A NextJS (React), realtime, multiplayer version of tic tac toe. One user must be in incognito or private mode; or on a different browser or device.",
     github: "https://github.com/VictorShan/tic-tac-toe",
     website: "https://tic-tac-toe.victorshan.vercel.app/"
   },
@@ -39,7 +39,7 @@ const projects: project[] = [
   {
     projImg: "/images/TicTacToeWinCentered.png",
     projName: "Tic Tac Toe",
-    projDesc: "Realtime, multiplayer tic tac toe. One user must be in incognito or private mode; or on a different browser or device",
+    projDesc: "Realtime, multiplayer tic tac toe. One user must be in incognito or private mode; or on a different browser or device.",
     github: "https://github.com/VictorShan/tic-tac-toe/tree/master",
     website: "https://tic-tac-toe-82af8.web.app/"
   },

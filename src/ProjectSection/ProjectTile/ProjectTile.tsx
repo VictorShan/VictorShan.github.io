@@ -1,6 +1,7 @@
 import styles from './ProjectTile.module.sass'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
+import Image from 'next/image'
 import { project } from '../projects'
 import { VscGlobe } from '@react-icons/all-files/vsc/VscGlobe'
 import { FaGithub } from '@react-icons/all-files/fa/FaGithub'
@@ -15,7 +16,7 @@ export default function ProjectTile({ project, id }: props) {
       className={styles.card}
       text={'dark'}
     >
-      <Card.Img variant="top" src={project.projImg}/>
+      <Card.Img variant="top" src={project.projImg} alt={project.projName}/>
       <Card.Body className={styles.body}>
         <Card.Title className={styles.title}>{project.projName}</Card.Title>
         <Card.Text>{project.projDesc}</Card.Text>
