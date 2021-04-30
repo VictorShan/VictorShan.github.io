@@ -7,3 +7,6 @@
   align-items: center;
 }
 
+.main {
+  margin: 0 max(10%, 10px);
+}

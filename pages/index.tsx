@@ -12,7 +12,7 @@ export default function Home() {
         <meta name="Description" content={pageDescription} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <main>
+      <main className={styles.main}>
         <Hero />
         <Attributes />
         <ProjectSection />

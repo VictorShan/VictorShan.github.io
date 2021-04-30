@@ -1,6 +1,6 @@
 .hero {
-  padding: max(10%, 10px);
-  padding-top: calc(max(10%, 10px) - 75px);
+  padding: calc(max(10%, 10px) - 75px) 0;
+  // padding-top: ;
   display: flex;
   justify-content: center;
   align-items: center;
