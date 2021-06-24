@@ -41,7 +41,9 @@ class MyDocument extends Document {
   }
 }
 
-const pageDescription = "The portfolio page for the full-stack engineer Victor Shan. " +
-                        "Design, build, repeat! My projects go through an iterative "
+const pageDescription = "The portfolio page for the full-stack engineer "
+  + "Victor Shan. Design, build, repeat! I have use serverless deployments"
+  + " that have the ability to scale to millions of users. Let me help make"
+  + " your business thrive!"
 
 export default MyDocument
