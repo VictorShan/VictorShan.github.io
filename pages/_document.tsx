@@ -18,6 +18,7 @@ class MyDocument extends Document {
           <script src="/analytics.js"></script>
           <meta name="google-site-verification" content="koHkM4ns-HvP6Z3-zLZmRJSvVsoDmmjrxXxWqNk767Y" />
           <meta charSet="utf-8" />
+          <meta name="author" content="Victor Shan" />
           <meta property="og:title" content="Victor Shan's Homepage"/>
           <meta property="og:type" content="website"/>
           <meta property="og:url" content="VictorShan.github.io"/>
@@ -26,7 +27,7 @@ class MyDocument extends Document {
           <meta property="og:image:width" content="1096" />
           <meta property="og:image:height" content="577" />
           <meta property="og:description" content={pageDescription} />
-          <meta property="twitter:card" content={pageDescription} />
+          <meta property="twitter:card" content="summary_large_image" />
           <meta property="twitter:creator" content="VictorShanVS" />
           <meta property="twitter:site" content="VictorShan_Site" />
           <meta name="description" content={pageDescription} />
