@@ -3,6 +3,7 @@ import styles from '../styles/Home.module.css'
 import ProjectSection from '../src/ProjectSection/ProjectSection'
 import Hero from '../src/Hero/Hero'
 import Attributes from '../src/Attributes/Attributes'
+import Footer from '../src/Footer/Footer'
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <Hero />
         <Attributes />
         <ProjectSection />
+        <Footer />
       </main>
     </div>
   )
