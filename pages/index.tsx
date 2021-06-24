@@ -9,15 +9,7 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>Victor Shan - Home</title>
-        <meta name="Description" content={pageDescription} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-GXG2Q1V7DW"></script>
-        <script>
-          {`window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-GXG2Q1V7DW');`}
-        </script>
       </Head>
       <main className={styles.main}>
         <Hero />
@@ -27,6 +19,3 @@ export default function Home() {
     </div>
   )
 }
-
-const pageDescription = "The portfolio page for the full-stack engineer Victor Shan. " +
-                        "Design, build, repeat! My projects go through an iterative "
