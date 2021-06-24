@@ -1,13 +1,10 @@
 .hero {
   padding: calc(max(10%, 10px) - 75px) 0;
-  // padding-top: ;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .hero div {
-  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,9 +23,9 @@
   width: 100%;
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 730px){
   .hero {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     padding-top: max(10%, 10px);
   }
 
