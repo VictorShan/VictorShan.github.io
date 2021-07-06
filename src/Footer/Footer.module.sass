@@ -1,3 +1,21 @@
 .footer
   width: 100%
   text-align: center
+  display: grid
+  grid-template-columns: 1fr 1fr
+  align-items: center
+  padding: 20px
+
+  p
+    margin-bottom: 0
+
+  div
+    display: flex
+    justify-content: center
+
+    a:nth-child(1)
+      margin-right: 3rem
+
+@media screen and ( max-width: 500px )
+  .footer
+    grid-template-columns: 1fr
