@@ -1,8 +1,8 @@
-import { AppPropsType } from 'next/dist/next-server/lib/utils'
+import type { AppProps } from 'next/app'
 import Layout from '../src/Layout'
 import '../styles/globals.scss'
 
-function MyApp({ Component, pageProps }: AppPropsType) {
+function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Layout>
       <Component {...pageProps} />

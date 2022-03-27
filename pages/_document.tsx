@@ -17,7 +17,7 @@ class MyDocument extends Document {
           <script async src="https://www.googletagmanager.com/gtag/js?id=G-GXG2Q1V7DW"></script>
           <script src="/analytics.js"></script>
           <meta name="google-site-verification" content="koHkM4ns-HvP6Z3-zLZmRJSvVsoDmmjrxXxWqNk767Y" />
-          <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+          <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
           <meta name="author" content="Victor Shan" />
           <meta property="og:title" content="Victor Shan's Homepage"/>
           <meta property="og:type" content="website"/>
