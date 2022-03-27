@@ -4,6 +4,7 @@ import ProjectSection from '../src/ProjectSection/ProjectSection'
 import Hero from '../src/Hero/Hero'
 import Attributes from '../src/Attributes/Attributes'
 import Footer from '../src/Footer/Footer'
+import ArtProjectSection from '../src/ProjectSection/ArtProjectSection'
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <Hero />
         <Attributes />
         <ProjectSection />
+        <ArtProjectSection />
         <Footer />
       </main>
     </div>

@@ -4,7 +4,7 @@ import { Linkedin, Github } from 'react-bootstrap-icons'
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <p>Copyright 2021 Victor Shan</p>
+      <p>Copyright 2022 Victor Shan</p>
       <div>
         <a href="https://www.linkedin.com/in/victorshanvs/" target="_blank" rel="noopener noreferrer">
           <Linkedin /> LinkedIn
