@@ -1,9 +1,10 @@
 ---
-import MainHead from "../components/MainHead.astro";
-import Footer from "../components/Footer.astro";
-import Nav from "../components/Nav.astro";
+import MainHead from "../components/MainHead.astro"
+import Footer from "../components/Footer.astro"
+import Nav from "../components/Nav.astro"
+import Tags from "../components/ProjectPreview/Tags.astro"
 
-const { content } = Astro.props;
+const { content } = Astro.props
 ---
 
 <html lang={content.lang || "en"}>
@@ -11,11 +12,13 @@ const { content } = Astro.props;
     <MainHead title={content.title} description={content.description} />
     <style>
       .hero {
+        position: relative;
         padding: 8rem;
         display: flex;
         background-color: var(--t-fg);
         background-repeat: no-repeat;
         background-size: cover;
+        background-position-y: 60%;
         min-height: 25vw;
         color: white;
         flex-direction: column;
@@ -23,30 +26,14 @@ const { content } = Astro.props;
         justify-content: center;
       }
 
-      .tag {
-        margin-left: 0.5em;
-        margin-right: 0.5em;
-        text-transform: uppercase;
-      }
-
-      .tag:nth-of-type(1n) {
-        color: var(--c-green);
-      }
-      .tag:nth-of-type(2n) {
-        color: var(--c-orange);
-      }
-      .tag:nth-of-type(3n) {
-        color: var(--c-blue);
-      }
-      .tag:nth-of-type(4n) {
-        color: var(--c-pink);
-      }
-
       .title {
         font-size: var(--f-u10);
         font-weight: 900;
+        padding: 0 0.75rem;
+        background-color: rgba(0, 0, 0, 0.5);
         text-transform: uppercase;
         letter-spacing: 0.0625em;
+        z-index: 2;
       }
 
       .leadIn {
@@ -78,6 +65,14 @@ const { content } = Astro.props;
         text-align: center;
         margin-top: 3rem;
       }
+
+      .imgOverlay {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+      }
     </style>
   </head>
   <body>
@@ -87,7 +82,9 @@ const { content } = Astro.props;
     </header>
     <div class="leadIn">
       <div class="wrapper">
-        {content.tags.map((t: string) => <span class="tag">{t}</span>)}
+        <div class="flex justify-center items-center">
+          <Tags tags={content.tags} />
+        </div>
         <h3 class="tagline">{content.description}</h3>
       </div>
     </div>

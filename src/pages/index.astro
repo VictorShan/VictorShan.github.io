@@ -3,12 +3,14 @@
 import MainHead from "../components/MainHead.astro"
 import Nav from "../components/Nav.astro"
 import Footer from "../components/Footer.astro"
-import PortfolioPreview from "../components/PortfolioPreview.astro"
+import ProjectPreview from "../components/ProjectPreview/ProjectPreview.astro"
 
 // Data Fetching: List all Markdown posts in the repo.
 const projects = await Astro.glob("./project/**/*.md")
-const featuredProject = projects[0]
-
+const featuredProject = projects[2]
+const maxProjectsShown = Math.max(projects.length, 8)
+const bgImg = (width: number, quality: number) =>
+  `https://images.unsplash.com/photo-1643083348068-f81ae31d055a?ixlib=rb-1.2.1&w=${width}&q=${quality}`
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
@@ -20,7 +22,7 @@ const featuredProject = projects[0]
       title="Victor Shan"
       description="Victor Shan - Developer and Amateur Artist. Software developer by day, aspiring artist by night."
     />
-    <style>
+    <style lang="scss">
       .wrapper {
         margin-top: 2em;
         margin-bottom: 2em;
@@ -29,6 +31,7 @@ const featuredProject = projects[0]
       .hero {
         position: relative;
         overflow: hidden;
+        max-height: 80vh;
       }
 
       @media (min-width: 750px) {
@@ -45,8 +48,9 @@ const featuredProject = projects[0]
 
       .gradient,
       .gradient2 {
-        background-image: url("/assets/mesh-gradient.jpg");
+        background-image: url("/assets/mesh-gradient.webp");
         background-size: cover;
+        background-position-y: 0%;
         pointer-events: none;
         mix-blend-mode: screen;
         width: 100%;
@@ -73,13 +77,6 @@ const featuredProject = projects[0]
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
-        padding-left: 2rem;
-      }
-
-      @media (min-width: 750px) {
-        .overlay {
-          padding-left: 4rem;
-        }
       }
 
       .title {
@@ -129,6 +126,7 @@ const featuredProject = projects[0]
         background-color: var(--t-fg);
         padding: 0.25em 0.5em;
         z-index: 2;
+        cursor: default;
       }
 
       @media (min-width: 750px) {
@@ -198,65 +196,87 @@ const featuredProject = projects[0]
         text-align: center;
         margin-top: 2em;
       }
+
+      /* New code starts here */
+      .projectGrid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+        gap: 10px 10px;
+        place-items: center;
+        grid-auto-rows: 1fr;
+      }
+
+      .projectGrid > div:nth-child(1) {
+        width: 100%;
+        height: 100%;
+        background-color: red;
+        grid-column: 1 / span 2;
+      }
+
+      @media (max-width: 1300px) {
+        .projectGrid {
+          grid-template-columns: 1fr;
+        }
+
+        .projectGrid > div:nth-child(1) {
+          grid-column: 1 / span 1;
+        }
+      }
     </style>
   </head>
   <body>
     <Nav />
-    <header class="overflow-hidden relative">
+    <header class="hero">
       <img
         width="1600"
         height="1131"
         class="img"
-        src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&q=75"
-        srcset="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&q=75 800w,https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&q=75 1200w,https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1600&q=75 1600w,https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=2400&q=75 2400w"
+        src={bgImg(1200, 75)}
+        srcset={`${bgImg(1200, 75)} 800w,${bgImg(1200, 75)} 1200w,${bgImg(
+          1600,
+          75
+        )} 1600w,${bgImg(2400, 75)} 2400w`}
         sizes="(max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, (max-width: 2400px) 2400px, 1200px"
       />
       <div class="gradient"></div>
       <div class="gradient2"></div>
       <div class="overlay">
-        <h1 class="title">
-          <small class="subtitle">The personal site of</small>Victor Shan
-        </h1>
-        <div class="roles">
-          <span class="role"
-            >👩‍💻 Developer <span class="invert">👩‍💻 Developer</span>
-          </span>
-          <span class="role"
-            >🎤 Speaker <span class="invert">🎤 Speaker</span>
-          </span>
-          <span class="role"
-            >✏️ Artist <span class="invert">✏️ Artist</span>
-          </span>
+        <div class="container mx-auto">
+          <h1 class="title">
+            <small class="subtitle">The personal site of</small>Victor Shan
+          </h1>
+          <div class="roles">
+            <span class="role"
+              >👩‍💻 Developer <span class="invert">👩‍💻 Developer</span>
+            </span>
+            <span class="role"
+              >🔎 Expolorer <span class="invert">🔎 Expolorer</span>
+            </span>
+            <span class="role"
+              >✏️ Artist <span class="invert">✏️ Artist</span>
+            </span>
+          </div>
+          <p class="desc">A builder with a love of puzzles.</p>
         </div>
-        <p class="desc">Lover of dogs, roadtrips, and poetry.</p>
       </div>
     </header>
     <main class="wrapper">
-      <div class="grid">
-        <div class="section">
-          <h3 class="sectionTitle">Selected Work</h3>
-          <PortfolioPreview project={featuredProject} />
-          <div class="buttonContainer">
-            <a href="/projects/" class="button">View All</a>
+      <div class="section">
+        <h3 class="sectionTitle">Featured Work</h3>
+        <div class="projectGrid">
+          <div>
+            <ProjectPreview project={featuredProject} />
           </div>
-        </div>
-        <div class="section">
-          <h3 class="sectionTitle">About me</h3>
-          <p class="bio">
-            <span>Hello!</span> I’m Jeanine, and this is my website. It was made
-            using{" "}
-            <a
-              href="https://github.com/withastro/astro"
-              target="_blank"
-              rel="nofollow"
-            >
-              Astro</a
-            >, a new way to build static sites. This is just an example template
-            for you to modify.
-          </p>
-          <p>
-            <a href="/about">Read more</a>
-          </p>
+          {
+            projects
+              .filter(
+                (project) =>
+                  project.frontmatter.title != featuredProject.frontmatter.title
+              )
+              .slice(0, maxProjectsShown)
+              .map((project) => <ProjectPreview project={project} />)
+          }
         </div>
       </div>
     </main>

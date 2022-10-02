@@ -1,4 +1,5 @@
 {
   "semi": false,
-  "documentSelectors": ["**/*.astro"]
+  "documentSelectors": ["**/*.astro"],
+  "tabWidth": 2
 }

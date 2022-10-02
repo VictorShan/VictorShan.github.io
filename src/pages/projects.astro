@@ -1,8 +1,8 @@
 ---
-import MainHead from "../components/MainHead.astro";
-import Footer from "../components/Footer.astro";
-import Nav from "../components/Nav.astro";
-import PortfolioPreview from "../components/PortfolioPreview.astro";
+import MainHead from "../components/MainHead.astro"
+import Footer from "../components/Footer.astro"
+import Nav from "../components/Nav.astro"
+import PortfolioPreview from "../components/PortfolioPreview.astro"
 
 const projects = (await Astro.glob("./project/**/*.md"))
   .filter(({ frontmatter }) => !!frontmatter.publishDate)
@@ -10,14 +10,14 @@ const projects = (await Astro.glob("./project/**/*.md"))
     (a, b) =>
       new Date(b.frontmatter.publishDate).valueOf() -
       new Date(a.frontmatter.publishDate).valueOf()
-  );
+  )
 ---
 
 <html lang="en">
   <head>
     <MainHead
-      title="All Projects | Jeanine White"
-      description="Learn about Jeanine White's most recent projects"
+      title="All Projects | Victor Shan"
+      description="Learn about Victor Shan's most recent projects"
     />
     <style>
       .grid {

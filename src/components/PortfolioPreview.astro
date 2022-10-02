@@ -1,5 +1,5 @@
 ---
-const { frontmatter, url } = Astro.props.project;
+const { frontmatter, url } = Astro.props.project
 ---
 
 <div class="card">
@@ -11,7 +11,7 @@ const { frontmatter, url } = Astro.props.project;
     <div class="tags">
       Tagged:
       {
-        frontmatter.tags.map((t: string) => (
+        frontmatter.tags.sort().map((t: string) => (
           <div class="tag" data-tag={t}>
             {t}
           </div>
