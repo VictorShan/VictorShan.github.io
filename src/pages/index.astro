@@ -6,8 +6,17 @@ import Footer from "../components/Footer.astro"
 import ProjectPreview from "../components/ProjectPreview/ProjectPreview.astro"
 
 // Data Fetching: List all Markdown posts in the repo.
-const projects = await Astro.glob("./project/**/*.md")
-const featuredProject = projects[2]
+const projects = (await Astro.glob("./project/**/*.md"))
+  .sort(
+    (p1, p2) =>
+      new Date(p1.frontmatter.publishDate).valueOf() -
+      new Date(p2.frontmatter.publishDate).valueOf()
+  )
+  .reverse()
+const featuredProject = projects.filter(
+  (project) => project.frontmatter.title === "Tic Tac Toe Ver 2"
+)[0]
+// const featuredProject = projects[0]
 const maxProjectsShown = Math.max(projects.length, 8)
 const bgImg = (width: number, quality: number) =>
   `https://images.unsplash.com/photo-1643083348068-f81ae31d055a?ixlib=rb-1.2.1&w=${width}&q=${quality}`
@@ -232,6 +241,7 @@ const bgImg = (width: number, quality: number) =>
         width="1600"
         height="1131"
         class="img"
+        alt="decorative background image"
         src={bgImg(1200, 75)}
         srcset={`${bgImg(1200, 75)} 800w,${bgImg(1200, 75)} 1200w,${bgImg(
           1600,
@@ -263,7 +273,7 @@ const bgImg = (width: number, quality: number) =>
     </header>
     <main class="wrapper">
       <div class="section">
-        <h3 class="sectionTitle">Featured Work</h3>
+        <h2 class="sectionTitle">Featured Work</h2>
         <div class="projectGrid">
           <div>
             <ProjectPreview project={featuredProject} />

@@ -5,7 +5,7 @@ client: Self
 publishDate: 2020-11-26
 githubLink: https://github.com/VictorShan/tic-tac-toe/tree/master
 website: https://tic-tac-toe-victorshan.vercel.app/
-img: /assets/TicTacToeV1.png
+img: /assets/TicTacToeV1.webp
 description: |
   This was a data visualization school project.
 tags:
