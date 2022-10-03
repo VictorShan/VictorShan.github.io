@@ -3,7 +3,7 @@ layout: ../../../layouts/project.astro
 title: iGEM Club
 client: Self
 publishDate: 2022-01-02
-githubLink: https://github.com/cse442-20f/FP-Fight-Covid19
+github: https://github.com/cse442-20f/FP-Fight-Covid19
 website: https://tic-tac-toe-victorshan.vercel.app/
 img: /assets/igemClub.webp
 description: |
@@ -12,5 +12,3 @@ tags:
   - design
   - dev
 ---
-
-Description
