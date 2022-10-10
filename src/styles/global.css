@@ -75,15 +75,19 @@ a {
 }
 
 h1 {
-  font-size: var(--f-u8);
-}
-
-h2 {
   font-size: var(--f-u6);
 }
 
-h3 {
+h2 {
   font-size: var(--f-u4);
+}
+
+h3 {
+  font-size: var(--f-u2);
+}
+
+h4 {
+  font-size: var(--f-d1);
 }
 
 ul {
